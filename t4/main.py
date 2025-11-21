@@ -1,7 +1,10 @@
 """The main module of the assistant bot."""
 
-from bot__ import parse_input, add_contact, change_contact, output_phone
 from bot__ import (
+    parse_input,
+    add_contact, 
+    change_contact, 
+    output_phone,
     handler_hello,
     handler_add,
     handler_change, 
