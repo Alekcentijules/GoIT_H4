@@ -2,10 +2,12 @@
 
 from bot__ import parse_input, add_contact, change_contact, output_phone
 from bot__ import (
+    handler_hello,
     handler_add,
     handler_change, 
     handler_phone,
     handler_all,
+    handler_goodbye,
     COMMANDS
 )
 
@@ -31,7 +33,8 @@ def main():
             if command in COMMANDS:
                 result = COMMANDS[command](args, contacts)
                 print(result)
-            
+                if command in ['close', 'exit']:
+                    break
             else:
                 print("Invalid command!")
 
